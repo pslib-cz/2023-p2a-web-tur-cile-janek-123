@@ -1,5 +1,6 @@
 :root {
-    --text-light: #000000;
+    --text-light: #ffffff; /* celkem light text jsme dostali */
+    --animSpeed: .25s;
 }
 html {
     font-family: 'Open Sans', sans-serif;
@@ -68,12 +69,12 @@ a.categories__item
 
     position: relative;
 
-    transition: scale 1s ease;
+    transition: scale var(--animSpeed) ease;
 }
 
 a.categories__item:hover
 {
-    scale: 2;
+    scale: 1.05;
     z-index: 10;
 }
 
@@ -84,9 +85,9 @@ a.categories__item:hover
     bottom: 0;
     left: 0;
 
-    color: white;
+    transition: bottom var(--animSpeed), left var(--animSpeed), translate var(--animSpeed);
 
-    transition: bottom 1s ease, left 1s ease, translate 1s ease;
+    white-space: nowrap;
 }
 
 .categories__item:hover .categories__item-description
@@ -94,4 +95,12 @@ a.categories__item:hover
     left: 50%;
     bottom: 50%;
     translate: -50% 50%;
+}
+
+.page-header
+{
+    color: white;
+    background-image: url(../images/egypt.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
