@@ -78,6 +78,16 @@ a.categories__item:hover
     z-index: 10;
 }
 
+a.categories__item img
+{
+    transition: scale var(--animSpeed);
+}
+
+a.categories__item:hover img
+{
+    scale: 1.2;
+}
+
 .categories__item-description
 {
     position: absolute;
