@@ -52,3 +52,29 @@ figure, h2 {
     font-size: 2em;
     color: var(--text-light);
 }
+
+.categories
+{
+    display: flex;
+}
+
+.categories:not(:has(a:hover)) a, a.categories__item:hover { filter: blur(0px); }
+
+a.categories__item { filter: blur(4px);}
+
+a.categories__item
+{  
+    border-radius: 20px;
+    overflow: hidden;
+
+    position: relative;
+}
+
+.categories__item-description
+{
+    position: absolute;
+
+    bottom: 0;
+
+    color: white;
+}
